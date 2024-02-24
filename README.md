@@ -1,7 +1,7 @@
 
 # Project Title
 
-This project creates a web application by using Question Generation model in PyTorch.
+This project creates a web application by using a Question Generation model in PyTorch.
 
 ## API Reference
 
