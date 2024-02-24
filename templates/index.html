@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QGPT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+</head>
+<body>
+    <div class="top-container" style="margin-left: 20px;">
+        <h3>Question Generator</h3>
+        <div id="loader" style="display: none; color: white;">
+            <i class="fa fa-spinner fa-spin"></i> Loading...
+        </div>
+    </div>
+    <div class="chat-container">
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="typing-container">
+            <div class="typing-content">
+                <div class="typing-textarea">
+                    <textarea id="context" name="context" spellcheck="false" placeholder="Enter a prompt here" required></textarea>
+                </div>
+                <div class="typing-controls">
+                    <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer;">
+                        <span class="material-icons-round">send</span>
+                    </button>
+                    <span class="material-icons-round">delete</span>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
